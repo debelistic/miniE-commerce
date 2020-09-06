@@ -30,14 +30,21 @@ const products = [
     imageUrl: "http://dummyimage.com/218x159.png/5fa2dd/ffffff",
     supplier: "scan frost",
   },
+  {
+    id: 5,
+    name: "scan frost deep freez",
+    quantity: 3,
+    imageUrl: "http://dummyimage.com/218x159.png/5fa2dd/ffffff",
+    supplier: "scan frost",
+  },
 ]
 
 export default function Products() {
   return (
-    <Container>
+    <Container className='container-fluid m-auto'>
       <Row>
         {products.map((product) => (
-          <Col xs={12} md={8} lg={2}>
+          <Col xs={12} md={8} lg={2} className='mt-2 mr-5' align='center'>
             <Image src={product.imageUrl} rounded />
           </Col>
         ))}
