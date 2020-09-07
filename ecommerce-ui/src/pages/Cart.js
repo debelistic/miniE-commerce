@@ -2,6 +2,12 @@ import React from "react"
 import { useSelector } from "react-redux"
 import Header from "../commons/Header"
 import Footer from "../commons/Footer"
+import "../App.css"
+
+const usStl = {
+  listStyle: "none",
+  padding: 10,
+}
 
 export default function Cart() {
   const cart = useSelector((state) => state.cart)
@@ -13,12 +19,16 @@ export default function Cart() {
     <div>
       <Header />
       <div className=" container-fluid min-vh-85">
-        <p>hello</p>
+        <ul style={usStl}>
         {result.map((item) => (
           <li key={item.id}>
+
             {item.name} {item.count}
+            <p>{item.count * item.price}</p>
           </li>
         ))}
+        </ul>
+        
       </div>
       <Footer />
     </div>

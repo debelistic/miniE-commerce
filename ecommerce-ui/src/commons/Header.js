@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Navbar, Nav } from "react-bootstrap"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
+
 
 const products = [
   {
@@ -86,9 +88,12 @@ export default function Header() {
   }, [searchTerm])
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Shop Now</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <Link to="/">Shope Now</Link>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       {/* <Form inline> */}
+      
       <div style={{ position: "relative" }}>
         <input
           value={searchTerm}
@@ -111,6 +116,7 @@ export default function Header() {
         </ul>
       </div>
       {/* </Form> */}
+      <Link to="/cart">
       <button type="submit">
         <svg
           width="1em"
@@ -127,6 +133,8 @@ export default function Header() {
         </svg>
         <span>cart {cart.length}</span>
       </button>
+      </Link>
+      
 
       <Navbar.Collapse id="basic-navbar-nav" className="float-right">
         <Nav className="mr-auto">
