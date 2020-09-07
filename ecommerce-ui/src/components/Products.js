@@ -58,7 +58,7 @@ export default function Products() {
               <Card.Img variant="top" src={product.imageUrl} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>Price: {product.price}</Card.Text>
+                <Card.Text>Price: &#8358;{product.price}</Card.Text>
                 <Button
                   onClick={() => dispatch(addToCart(product))}
                   variant="primary"
