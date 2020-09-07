@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.min-vh-85 {
+  min-height: 85vh
+}
