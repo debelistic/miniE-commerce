@@ -38,5 +38,7 @@
 }
 
 .min-vh-85 {
-  min-height: 85vh
+  min-height: 85vh;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }

@@ -1,5 +1,7 @@
 import React from "react"
-import { Container, Row, Image, Col } from "react-bootstrap"
+import { Container, Row, Card, Button, CardColumns } from "react-bootstrap"
+import { useDispatch } from "react-redux"
+import { addToCart } from "../utils/reducer"
 
 const products = [
   {
@@ -45,17 +47,28 @@ const products = [
 ]
 
 export default function Products() {
+  const dispatch = useDispatch()
+
   return (
-    <Container className="container-fluid m-auto">
-      <Row>
-        {products.map((product) => (
-          <Col key={product.id} xs={12} md={8} lg={2} className="mt-2 mr-5" align="center">
-            <Image src={product.imageUrl} rounded />
-            <h3 style={{width: '100%', height: 40, overflow: 'hidden'}}>{product.name}</h3>
-            <p>Price: &#8358;{product.price}</p>
-            <button>add to cart</button>
-          </Col>
-        ))}
+    <Container className="container-fluid m-20" align="center">
+      <Row align="center">
+        <CardColumns className="pt-10" align="center">
+          {products.map((product) => (
+            <Card key={product.id} style={{}}>
+              <Card.Img variant="top" src={product.imageUrl} />
+              <Card.Body>
+                <Card.Title>{product.name}</Card.Title>
+                <Card.Text>Price: {product.price}</Card.Text>
+                <Button
+                  onClick={() => dispatch(addToCart(product))}
+                  variant="primary"
+                >
+                  Add to cart
+                </Button>
+              </Card.Body>
+            </Card>
+          ))}
+        </CardColumns>
       </Row>
     </Container>
   )
