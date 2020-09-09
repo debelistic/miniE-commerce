@@ -46,27 +46,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script type="text/javascript" src="https://ravesandbox.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-    <script>  
-      window.getpaidSetup({
-      amount: this.state.amount,
-      txref: 'rave-checkout-1508751596',
-      PBFPubKey: this.publicKey,
-      custom_title: 'React Pay',
-      payment_method: 'both',
-      customer_email: 'john@example.com',
-      customer_phone: '08033445566',
-      onclose: function() {},
-      callback: function(d) {
-       //  var flw_ref = d.tx.flwRef;
-        if (d.tx.chargeResponseCode === '00' || d.tx.chargeResponseCode === '0') {
-          toast.success("Wow! That was fast and easy!");
-        } else {
-          toast.error("Ouch! Please try again!");
-        }
-        console.log(d);
-      }
-    });
-  </script>  
+   
   </body>
 </html>
