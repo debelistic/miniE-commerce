@@ -4,6 +4,9 @@
   "description": "A mini e-cormerce application",
   "main": "index.js",
   "scripts": {
+    "start": "cd ecommerce-ui && yarn start",
+    "build": "cd ecommerce-ui && yarn build",
+    "serve": "cd ecommerce-ui && serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
