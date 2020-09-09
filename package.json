@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd ecommerce-ui && yarn start",
-    "build": "cd ecommerce-ui && yarn build",
+    "build": "cd ecommerce-ui && yarn install --only=dev && yarn build",
     "serve": "cd ecommerce-ui && serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
