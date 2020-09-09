@@ -87,9 +87,9 @@ export default function Header() {
   }, [searchTerm])
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">
-        <Link to="/">Shope Now</Link>
-      </Navbar.Brand>
+      <Link to="/" className="brandName">
+        Shop Now
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       {/* <Form inline> */}
 
@@ -116,7 +116,19 @@ export default function Header() {
       </div>
       {/* </Form> */}
       <Link to="/cart">
-        <button type="submit">
+        <button
+          type="submit"
+          style={{
+            borderRadius: 10,
+            paddingTop: 4,
+            paddingBottom: 4,
+            paddingRight: 8,
+            paddingLeft: 8,
+            backgroundColor: "#09a4da",
+            color: "white",
+            fontSize: 20,
+          }}
+        >
           <svg
             width="1em"
             height="1em"
@@ -135,9 +147,9 @@ export default function Header() {
       </Link>
 
       <Navbar.Collapse id="basic-navbar-nav" className="float-right">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Supplier</Nav.Link>
-        </Nav>
+        {/* <Nav className="mr-auto"> */}
+        <Link to="/login">Supplier</Link>
+        {/* </Nav> */}
       </Navbar.Collapse>
     </Navbar>
   )

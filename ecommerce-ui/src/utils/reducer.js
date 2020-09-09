@@ -81,7 +81,6 @@ function reducer(state = initialState, action) {
     }
   }
   if (action.type === "RESET_CART") {
-    
     return {
       ...state,
       cart: [],

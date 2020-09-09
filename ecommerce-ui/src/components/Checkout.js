@@ -4,14 +4,11 @@ import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import { resetCart } from "../utils/reducer"
 
-
-
-
 import "./App.css"
 
 const App = () => {
   const dispatch = useDispatch()
-  const history = useHistory();
+  const history = useHistory()
   const publicKey = "pk_test_84eeb368c319c8a29e62e58955d222ca81ace75f"
   const amount = `${useSelector((state) => state.total)}00`
   const [email, setEmail] = useState("")
@@ -28,7 +25,7 @@ const App = () => {
     text: "Pay Now",
     onSuccess: () => {
       dispatch(resetCart())
-      history.push('/')
+      history.push("/")
     },
     onClose: () => alert("Wait! Don't leave :("),
   }
@@ -37,13 +34,13 @@ const App = () => {
       <div className="pay-container">
         <div className="item">
           <div className="overlay-effect">
-          <img
-            className="item-image"
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-            alt="product"
-          />
+            <img
+              className="item-image"
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="product"
+            />
           </div>
-         
+
           <div className="item-details">
             <p className="item-details__title">Shop Now</p>
             <p className="item-details__amount">NGN {amount / 100}.00</p>

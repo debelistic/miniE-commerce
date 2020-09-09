@@ -50,7 +50,14 @@ export default function Products() {
   const dispatch = useDispatch()
 
   return (
-    <Container className="container-fluid m-20" align="center">
+    <Container
+      className="container-fluid m-20"
+      align="center"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Row align="center">
         <CardColumns className="pt-10" align="center">
           {products.map((product) => (
