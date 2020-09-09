@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.min-vh-85 {
+  min-height: 85vh;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+.btn-primary{
+  color: #fff;
+  background-color: #09a4da;
+  border-color: #09a4da;
+}
+
+
+a{
+  color: #09a4da;
+  margin: 0 20px;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #09a4da;
+}
+
+.btn-primary:hover{
+  background-color: #09a4da;
+  border-color: #09a4da;
+}
+
+a.brandName{
+  margin: 0 20px;
+  font-size: 3vw;
+}
+
+
+input{
+  border-radius: 10px;
+  padding: 4px 8px;
+}
