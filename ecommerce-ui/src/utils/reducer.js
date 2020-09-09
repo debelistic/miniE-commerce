@@ -10,9 +10,9 @@ const initialState = {
 }
 
 const persistConfig = {
-  key: ["cart", "total"],
+  key:"root",
   storage,
-  whitelist: ["cart"],
+  whitelist: ["cart", "total"],
 }
 
 function reducer(state = initialState, action) {
@@ -66,15 +66,17 @@ function reducer(state = initialState, action) {
     const total = state.total - addedItem.price
     return {
       ...state,
+      cart: [...state.cart],
       total,
     }
   }
   if (action.type === "ADD_AN_ITEM") {
-    const addedItem = state.cart.find((item) => item.id === action.payload.id)
+    let addedItem = state.cart.find((item) => item.id === action.payload.id)
     addedItem.quantity += 1
     const total = state.total + addedItem.price
     return {
       ...state,
+      cart: [...state.cart],
       total,
     }
   }
