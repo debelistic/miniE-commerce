@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Container, Row, Card, Button, CardColumns } from "react-bootstrap"
 import { useSelector, useDispatch } from "react-redux"
 import Header from "../commons/Header"
@@ -57,6 +58,8 @@ export default function Cart() {
               )}
             </CardColumns>
             <h2>total: {total}</h2>
+
+            <Link to="/checkout">check out</Link>
           </Row>
         </Container>
       </div>
