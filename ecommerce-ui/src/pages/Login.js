@@ -2,6 +2,8 @@ import React from "react"
 import { Form, Button, Container, Row } from "react-bootstrap"
 import Header from "../commons/Header"
 import Footer from "../commons/Footer"
+import { Link } from "react-router-dom"
+
 
 export default function Login() {
   return (
@@ -39,6 +41,10 @@ export default function Login() {
               <Button variant="primary" type="submit">
                 Submit
               </Button>
+              <div>
+              <Link to='signup'>Signup</Link>
+              <Link to='forgot'>Forgot Password</Link>
+              </div>
             </Form>
           </Row>
         </Container>
